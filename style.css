@@ -1,0 +1,177 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+html { overflow-y: scroll; }
+
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+/* Левый сайдбар */
+.sidebar-left {
+    width: 237px;
+    background: #282828;
+}
+
+.logo{
+    margin: 16px;
+    width: 201px;
+    height: 44px;
+}
+
+.menu-item {
+    font-size: 14px;
+    color: #FFFFFF;
+    background: none;
+    border: none;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+.menu-item img {
+    margin-right: 8px;
+}
+
+.menu-item.active {
+  background: #B5815080;
+}
+
+/* Центральная часть */
+.content {
+  flex: 1;
+  background: linear-gradient(#f6f1e9, #492600);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.topbar {
+  flex-shrink: 0;
+}
+
+.chat {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.agent-img {
+ width: 45px;
+ height: 45px;
+ 
+}
+
+.chat-content {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #b27a4a;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  height: 45px;
+  width: 206px;
+}
+
+/* Правый сайдбар */
+.sidebar-right {
+  width: 300px;
+  background: #FFFCF0;
+  border-left: 1px solid #ddd;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar-right.hidden {
+  transform: translateX(100%);
+}
+
+.content.sidebar-hidden .chat {
+  justify-content: center;
+  max-width: none;
+}
+
+.content.sidebar-hidden .bubble {
+  max-width: 800px;
+}
+
+.right-header{
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly 
+}
+.right-header img{
+  width: 37px;
+  height: 37px;
+}
+
+#toggleBtn {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+#toggleBtn:hover {
+  opacity: 0.7;
+}
+.new-chat{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-outline{
+  width: 270px;
+  padding: 10px 15px;
+  border: 1px solid #E2E0C8;
+  background-color: #fff;
+  color: #B58150;
+  border-radius: 9px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+}
+.btn-outline img{
+  width: 20px;
+  height: 20px;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+}
+
+footer small {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
